@@ -12,6 +12,14 @@ def translate_it():
 
     pass
 
+def language_list():
+    
+    pass
+
+def  clear():
+    
+    pass
+
 # Text boxes 
 original_text = Text(root, width=30, height=20)
 original_text.grid(row=0, column=0, padx=20, pady=10) 
@@ -31,6 +39,11 @@ original_combo.grid(row=1, column=0)
 translate_combo = ttk.Combobox(root, width=30, value=language_list)
 original_combo.current(21)
 original_combo.grid(row=1, column=0)
+
+
+# clear button 
+clear_button = Button(root, tetx='clear', command=clear)
+clear_button.grid(row=2, column=1)
 
 
 
