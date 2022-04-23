@@ -1,4 +1,5 @@
 from tkinter import *
+from turtle import bgcolor
 # build language translator using tkinter and googletrans
 from googletrans import Translator
 import googletrans
