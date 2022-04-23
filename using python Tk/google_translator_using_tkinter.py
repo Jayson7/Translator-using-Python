@@ -1,6 +1,7 @@
 from tkinter import *
 # build language translator using tkinter and googletrans
 from googletrans import Translator
+import googletrans
 import textblob  
 from tkinter import ttk, messagebox 
 root = Tk()
@@ -15,7 +16,10 @@ root.minsize('800','250')
 def translate_it():
 
     pass
-language_list = 2
+
+languages = googletrans.LANGUAGES
+
+language_list = list(languages.values())
 
 def  clear():
     original_text.delete(1.0, END)
