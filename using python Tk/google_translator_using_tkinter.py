@@ -15,7 +15,9 @@ root.minsize('800','250')
 # Text boxes 
 
 def translate_it():
+    # first delete any previous translation
     translated_text.delete(1.0, END)
+    # try
     try:
         # get langueages from dict keys 
         # get the from language key 
