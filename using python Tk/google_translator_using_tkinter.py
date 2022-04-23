@@ -26,8 +26,11 @@ translated_text.grid(row=0, column=2, padx=20, pady=10)
 # combo boxes 
 original_combo = ttk.Combobox(root, width=30, value=language_list)
 original_combo.current(21)
-original_combo.grid(row=1, column=0, padx=20, pady=10)
+original_combo.grid(row=1, column=0)
 
+translate_combo = ttk.Combobox(root, width=30, value=language_list)
+original_combo.current(21)
+original_combo.grid(row=1, column=0)
 
 
 
