@@ -15,8 +15,27 @@ root.minsize('800','250')
 # Text boxes 
 
 def translate_it():
-
-    pass
+    translated_text.delete(1.0, END)
+    try:
+        # get langueages from dict keys 
+        # get the from language key 
+        for key, value in languages.items():
+            if value == original_combo.get():
+                from_language_key = key
+        # get the key to language key
+        for key, value in languages.items():
+            if value == translated_combo.get():
+                to_language_key = key
+        
+        # turn original text into a textblob
+        words = textblob.TextBlob(original_text.get(1.0, END))
+        # translate text
+        words = words.translate(from_lang=from_language_key, to=to_language_key)
+        # output translated text to screen 
+        translated_text.insert(1.0, words)
+        
+    except:
+        messagebox.showerror('Translator', e)
 
 languages = googletrans.LANGUAGES
 
